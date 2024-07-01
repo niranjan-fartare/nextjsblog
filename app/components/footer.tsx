@@ -23,7 +23,7 @@ export default function Footer() {
   return (
     <footer className="mb-16">
 
-      <div style={{ borderTop: "1px solid #fff "}} className="mt-4"></div>
+      <div style={{ borderTop: "1px solid #fff "}} className="mt-8"></div>
 
       <ul className="font-sm mt-4 flex flex-col justify-center items-center space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
         <li>
