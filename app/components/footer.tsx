@@ -33,8 +33,9 @@ export default function Footer() {
             target="_blank"
             href="https://www.linkedin.com/in/niranjan-fartare/"
           >
-            <ArrowIcon />
+            
             <p className="ml-2 h-7">linkedin</p>
+            <ArrowIcon />
           </a>
         </li>
         <li>
@@ -44,8 +45,8 @@ export default function Footer() {
             target="_blank"
             href="mailto:me@niranjan.co"
           >
-            <ArrowIcon />
             <p className="ml-2 h-7">email</p>
+            <ArrowIcon />
           </a>
         </li>
         <li>
@@ -55,8 +56,7 @@ export default function Footer() {
             target="_blank"
             href="https://github.com/niranjan-fartare/"
           >
-            <ArrowIcon />
-            <p className="ml-2 h-7">github</p>
+            <p className="ml-2 h-7">github</p><ArrowIcon />
           </a>
         </li>
         <li>
@@ -66,8 +66,7 @@ export default function Footer() {
             target="_blank"
             href="/sitemap.xml"
           >
-            <ArrowIcon />
-            <p className="ml-2 h-7">sitemap</p>
+            <p className="ml-2 h-7">sitemap</p><ArrowIcon />
           </a>
         </li>
       </ul>
