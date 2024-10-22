@@ -5,7 +5,7 @@ export function BlogPosts() {
   const allBlogs = getBlogPosts();
 
   const sortedBlogs = allBlogs.sort((a, b) => 
-    new Date(b.metadata.publishedAt) - new Date(a.metadata.publishedAt)
+    new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime()
   );
 
   return (
