@@ -46,6 +46,7 @@ export default function Footer() {
       <p className="mt-8 text-neutral-600 dark:text-neutral-300 text-center">
         © {currentYear}, Niranjan Fartare. <u>Be kind</u>, <u>create</u>, <u>inspire</u>.
       </p>
+      <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "bbd68a963e22437aa650b6109ba8b13a"}'></script>
     </footer>
   );
 }
