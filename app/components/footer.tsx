@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Script from 'next/script';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -28,7 +29,7 @@ export default function Footer() {
       <div style={{ borderTop: "1px solid #fff" }} className="mt-8" />
 
       <nav className="flex justify-center relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative">
-        <div className="flex flex-row space-x-2"> {/* Consistent spacing as in the Navbar */}
+        <div className="flex flex-row space-x-2">
           {footerLinks.map(({ href, label }) => (
             <Link
               key={label}
@@ -46,7 +47,13 @@ export default function Footer() {
       <p className="mt-8 text-neutral-600 dark:text-neutral-300 text-center">
         © {currentYear}, Niranjan Fartare. <u>Be kind</u>, <u>create</u>, <u>inspire</u>.
       </p>
-      <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "bbd68a963e22437aa650b6109ba8b13a"}'></script>
+
+      {/* Cloudflare Script */}
+      <Script
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        strategy="lazyOnload"
+        data-cf-beacon='{"token": "bbd68a963e22437aa650b6109ba8b13a"}'
+      />
     </footer>
   );
 }
