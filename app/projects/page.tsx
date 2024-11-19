@@ -13,9 +13,25 @@ export default function Page() {
       <div className="mb-4">
         <h2 className="text-2xl font-medium">
           <a 
+            href="https://fakeapi.net" 
+            target="_blank" 
+            rel="noopener" 
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            Fake API
+          </a>
+        </h2>
+        <p className="mt-2 text-neutral-600 dark:text-neutral-400">
+        Free, publicly accessible and fast APIs designed to help developers thoroughly test their backend applications like e-commerce apps. 
+        </p>
+      </div>
+      
+      <div className="mb-4">
+        <h2 className="text-2xl font-medium">
+          <a 
             href="https://hostingchecker.co" 
             target="_blank" 
-            rel="noopener noreferrer" 
+            rel="noopener" 
             className="text-blue-600 dark:text-blue-400 hover:underline"
           >
             Hosting Checker
