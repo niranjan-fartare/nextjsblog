@@ -100,19 +100,19 @@ alter is used for,
 
 ## 27 Oct 
 # between .. and
-- `select * from emp where eid between 0 and 10;` <- Range
+- ```sql select * from emp where eid between 0 and 10;``` - Range
 # like
-- `select * from emp where ename like 'A%';` <- Starts with A
-- `select * from emp where ename like '%A;` <- Ends with A
-- `select * from emp where ename like '%A%';` <- Anything that contains  A
-- `select * from emp where ename like '_____';` <-  '_' <- wildcard
+- `select * from emp where ename like 'A%';` - Starts with A
+- `select * from emp where ename like '%A;` - Ends with A
+- `select * from emp where ename like '%A%';` - Anything that contains  A
+- `select * from emp where ename like '_____';` -  '_' - wildcard
 # order by
-- `select * from emp order by ename asc;` <- List records in Ascending Order
-- `select * from emp order by ename desc;` <- List records in Descending Order
-- `select * from emp order by ename desc, city asc;` <- List desc by ename first then by city
+- `select * from emp order by ename asc;` - List records in Ascending Order
+- `select * from emp order by ename desc;` - List records in Descending Order
+- `select * from emp order by ename desc, city asc;` - List desc by ename first then by city
 # limit
-- `select * from emp limit 8;` <- List the top 8 records
-- `select * from emp limit 8,2;` <- List the 2 records after the top 8 records
+- `select * from emp limit 8;` - List the top 8 records
+- `select * from emp limit 8,2;` - List the 2 records after the top 8 records
 # case
 - `select ename, case when city='Pune' then 1000 when city='Mumbai' then 1500 when city='Delhi' then 2000 else 500 end bonus from emp;`
 # Joins
