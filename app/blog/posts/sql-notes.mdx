@@ -1,6 +1,6 @@
 ---
 title: 'SQL Notes - Incomplete'
-publishedAt: '2024-12-21'
+publishedAt: '2024-11-23'
 summary: 'SQL Notes - Incomplete'
 ---
 
@@ -1343,5 +1343,156 @@ MariaDB [b16]> select eid, sal, dense_rank() over(order by sal desc) as 'Dense R
 +------+-------+------------+
 23 rows in set (0.001 sec)
 ```
+
+## Lag(col, n) 
+
+```sql
+MariaDB [b16]> select eid, ename, sal, did, lag(sal,3) over(order by eid asc) as total_sal from emp;
++------+-----------+-------+------+-----------+
+| eid  | ename     | sal   | did  | total_sal |
++------+-----------+-------+------+-----------+
+|    1 | Vivek     | 20000 |   97 |      NULL |
+|    1 | Vivek     | 20000 |   77 |      NULL |
+|    2 | Abhishek  | 30000 |   77 |      NULL |
+|    2 | Abhishek  | 30000 |   39 |     20000 |
+|    3 | Shivam    | 40000 |   46 |     20000 |
+|    3 | Shivam    | 40000 |   86 |     30000 |
+|    4 | Neha      | 50000 |   11 |     30000 |
+|    4 | Neha      | 50000 |   97 |     40000 |
+|    5 | Akshay    | 80000 |   92 |     40000 |
+|    5 | Akshay    | 80000 |   38 |     50000 |
+|    6 | Omkar     | 20000 |   68 |     50000 |
+|    6 | Omkar     | 20000 |   53 |     80000 |
+|    7 | Kavita    | 35000 |   38 |     80000 |
+|    7 | Kavita    | 35000 |   71 |     20000 |
+|    8 | Gaurav    | 35000 |   10 |     20000 |
+|    8 | Gaurav    | 35000 |   10 |     35000 |
+|    9 | Pooja     | 65000 |   20 |     35000 |
+|    9 | Pooja     | 65000 |   20 |     35000 |
+|   10 | Komal     | 65000 |   10 |     35000 |
+|   10 | Komal     | 65000 |   10 |     65000 |
+|   11 | Xin       | 65000 |   10 |     65000 |
+|   11 | Xin       | 65000 |   10 |     65000 |
+|   12 | Mr. Beast | 10000 |   30 |     65000 |
++------+-----------+-------+------+-----------+
+23 rows in set (0.001 sec)
+```
+
+## Lead(col,n)
+
+```sql
+MariaDB [b16]> select eid, ename, sal, did, lead(sal,3) over(order by eid asc) as total_sal from emp;
++------+-----------+-------+------+-----------+
+| eid  | ename     | sal   | did  | total_sal |
++------+-----------+-------+------+-----------+
+|    1 | Vivek     | 20000 |   97 |     30000 |
+|    1 | Vivek     | 20000 |   77 |     40000 |
+|    2 | Abhishek  | 30000 |   77 |     40000 |
+|    2 | Abhishek  | 30000 |   39 |     50000 |
+|    3 | Shivam    | 40000 |   86 |     50000 |
+|    3 | Shivam    | 40000 |   46 |     80000 |
+|    4 | Neha      | 50000 |   97 |     80000 |
+|    4 | Neha      | 50000 |   11 |     20000 |
+|    5 | Akshay    | 80000 |   92 |     20000 |
+|    5 | Akshay    | 80000 |   38 |     35000 |
+|    6 | Omkar     | 20000 |   53 |     35000 |
+|    6 | Omkar     | 20000 |   68 |     35000 |
+|    7 | Kavita    | 35000 |   71 |     35000 |
+|    7 | Kavita    | 35000 |   38 |     65000 |
+|    8 | Gaurav    | 35000 |   10 |     65000 |
+|    8 | Gaurav    | 35000 |   10 |     65000 |
+|    9 | Pooja     | 65000 |   20 |     65000 |
+|    9 | Pooja     | 65000 |   20 |     65000 |
+|   10 | Komal     | 65000 |   10 |     65000 |
+|   10 | Komal     | 65000 |   10 |     10000 |
+|   11 | Xin       | 65000 |   10 |      NULL |
+|   11 | Xin       | 65000 |   10 |      NULL |
+|   12 | Mr. Beast | 10000 |   30 |      NULL |
++------+-----------+-------+------+-----------+
+23 rows in set (0.001 sec)
+```
+
+### 23 Nov
+
+## View - virtual table
+
+- create view view_name as select_query;
+- replace -> 
+- Types:
+	- Simple -> Uses simple statements like 'where', supports CRUD
+	- Complex -> Uses joins, group by, window functions, Set Operators
+
+```sql
+MariaDB [b16]> create view ac_mumbai as select * from account where city='Mumbai'; //Simple View
+
+
+MariaDB [b16]> select * from ac_pune;
++------+--------------+------+------------+-------+
+| id   | name         | city | mob        | bal   |
++------+--------------+------+------------+-------+
+|    7 | Anjali Mehta | Pune | 9234567890 | 17000 |
++------+--------------+------+------------+-------+
+
+MariaDB [b16]> drop view ac_mumbai;
+Query OK, 0 rows affected (0.004 sec)
+```
+
+
+## Indexing 
+
+```sql
+create index idx_name on table_name(col_name);
+```
+
+- Clustered -> Arranges records in order
+- Non Clustered -> Maintains a reference table
+- Show indexes -> 
+	- `show index from table_name;`
+
+# Duplicate table with data
+
+```sql
+create table emp_bak as select * from emp;
+```
+
+# Duplicate table structure only
+
+```sql
+create table emp_test as select * from emp where 1 = 0;
+```
+
+# Insert from another table
+
+```sql
+insert into emp_test select * from emp where eid < 5;
+```
+
+# Run .sql files
+
+```sql
+source .sql_file_ocation
+```
+
+# Misc
+
+- `if not exists` -> only if the target does not already exist
+- `if exists` -> only if the target exists
+# Normalization & DeNormalization
+
+process of organizing data into multiple related tables to eliminate redundancy and dependency.
+
+## Goals
+
+- Minimize redundancy.
+- Avoid data anomalies (insertion, update, and deletion).
+
+- 1NF (First Normal Form)
+	- Ensures that each column contains atomic values (no repeating groups or arrays).
+- 2NF (Second Normal Form):
+    - Satisfies 1NF and removes partial dependencies (dependencies on part of a composite primary key).
+- 3NF (Third Normal Form):
+    - Satisfies 2NF and removes transitive dependencies (non-key columns depending on other non-key columns).
+- BCNF (Boyce-Codd Normal Form):
+	- A stricter version of 3NF where every determinant is a candidate key.
 
 
