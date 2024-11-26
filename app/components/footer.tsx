@@ -7,6 +7,10 @@ export default function Footer() {
   
   const footerLinks = [
     {
+      href: "https://archlinux.org/mirrors/niranjan.co/",
+      label: "arch linux mirror",
+    },
+    {
       href: "https://www.linkedin.com/in/niranjan-fartare/",
       label: "linkedin",
     },

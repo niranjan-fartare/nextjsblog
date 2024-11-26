@@ -19,9 +19,10 @@ export const metadata: Metadata = {
     title: 'Niranjan Fartare | Portfolio',
     description: 'Upcoming SDE. Highly motivated individual and a quick learner. Currently learning Java. Aspiring to be a Full Stack Developer.',
     url: baseUrl,
-    siteName: 'My Portfolio',
+    siteName: 'Niranjan Fartare | Portfolio',
     locale: 'en_US',
     type: 'website',
+    images :'/images/favicon.ico'
   },
   robots: {
     index: true,
