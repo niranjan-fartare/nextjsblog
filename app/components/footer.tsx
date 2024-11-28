@@ -11,12 +11,12 @@ export default function Footer() {
       label: "arch linux mirror",
     },
     {
-      href: "https://www.linkedin.com/in/niranjan-fartare/",
-      label: "linkedin",
-    },
-    {
       href: "mailto:me@niranjan.co",
       label: "email",
+    },
+    {
+      href: "https://www.linkedin.com/in/niranjan-fartare/",
+      label: "linkedin",
     },
     {
       href: "/sitemap.xml",
