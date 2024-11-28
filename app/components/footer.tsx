@@ -19,10 +19,6 @@ export default function Footer() {
       label: "email",
     },
     {
-      href: "https://github.com/niranjan-fartare/",
-      label: "github",
-    },
-    {
       href: "/sitemap.xml",
       label: "sitemap",
     },

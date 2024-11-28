@@ -10,8 +10,8 @@ const navItems = {
   '/projects': {
     name: 'projects',
   },
-  '/niranjan-fartare-resume.pdf': {
-    name: 'resume'
+  'https://github.com/niranjan-fartare/': {
+    name: 'github'
   }
 }
 
