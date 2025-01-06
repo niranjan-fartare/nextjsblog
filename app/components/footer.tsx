@@ -47,7 +47,7 @@ export default function Footer() {
       <p className="mt-8 text-neutral-600 dark:text-neutral-300 text-center">
         © {currentYear}, Niranjan Fartare. <u>Be kind</u>, <u>create</u>, <u>inspire</u>.
       </p>
-
+      
       {/* Cloudflare Script */}
       <Script
         src="https://static.cloudflareinsights.com/beacon.min.js"
