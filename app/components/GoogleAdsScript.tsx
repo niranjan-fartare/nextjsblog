@@ -1,5 +1,6 @@
-import { useEffect } from 'react';
+"use client";
 
+import { useEffect } from 'react';
 const GoogleAdsScript = () => {
   useEffect(() => {
     const script = document.createElement('script');
