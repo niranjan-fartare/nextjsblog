@@ -1,10 +1,10 @@
-import React from 'react';
-import Link from 'next/link';
-import Script from 'next/script';
+import React from "react";
+import Link from "next/link";
+import Script from "next/script";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  
+
   const footerLinks = [
     {
       href: "https://archlinux.org/mirrors/niranjan.co/",
@@ -45,9 +45,15 @@ export default function Footer() {
       </nav>
 
       <p className="mt-8 text-neutral-600 dark:text-neutral-300 text-center">
-        © {currentYear}, Niranjan Fartare. <u>Be kind</u>, <u>create</u>, <u>inspire</u>.
+        © {currentYear}, Niranjan Fartare. <u>Be kind</u>, <u>create</u>,{" "}
+        <u>inspire</u>.
       </p>
-      
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9568947438501064"
+        crossOrigin="anonymous"
+        strategy="lazyOnload" // You can change this to "afterInteractive" if needed
+      />
       {/* Cloudflare Script */}
       <Script
         src="https://static.cloudflareinsights.com/beacon.min.js"
