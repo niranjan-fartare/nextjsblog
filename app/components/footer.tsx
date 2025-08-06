@@ -54,6 +54,9 @@ export default function Footer() {
         crossOrigin="anonymous"
         strategy="lazyOnload" // You can change this to "afterInteractive" if needed
       />
+      <Link href="https://social.vivaldi.net/@niranjan0" rel="me">
+  Mastodon
+</Link>
       {/* Cloudflare Script */}
       <Script
         src="https://static.cloudflareinsights.com/beacon.min.js"
