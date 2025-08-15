@@ -7,16 +7,16 @@ export default function Footer() {
 
   const footerLinks = [
     {
-      href: "https://archlinux.org/mirrors/niranjan.co/",
-      label: "arch linux mirror",
-    },
-    {
       href: "mailto:me@niranjan.co",
       label: "email",
     },
     {
       href: "https://www.linkedin.com/in/niranjan-fartare/",
       label: "linkedin",
+    },
+    {
+      href: "/blog/list-of-public-mirrors",
+      label: "public mirrors",
     },
     {
       href: "/sitemap.xml",
@@ -52,11 +52,8 @@ export default function Footer() {
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9568947438501064"
         crossOrigin="anonymous"
-        strategy="lazyOnload" // You can change this to "afterInteractive" if needed
+        strategy="lazyOnload"
       />
-      <Link href="https://social.vivaldi.net/@niranjan0" rel="me">
-  Mastodon
-</Link>
       {/* Cloudflare Script */}
       <Script
         src="https://static.cloudflareinsights.com/beacon.min.js"

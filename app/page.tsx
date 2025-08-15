@@ -1,4 +1,4 @@
-import { BlogPosts } from 'app/components/posts';
+import { BlogPosts } from "app/components/posts";
 
 export default function Page() {
   return (
@@ -7,11 +7,13 @@ export default function Page() {
         Niranjan Fartare,
       </h1>
       <p className="mb-4">
-        Upcoming SDE. Highly motivated individual and a quick learner. Currently learning Java. Aspiring to be a Full Stack Developer.
+        Data Engineer with 3+ years experience in AWS, PySpark & Spark. Built
+        scalable ETL pipelines for finance & telecom domains using EMR, Glue and
+        Redshift. Expert in big data processing & cloud platforms like AWS.
       </p>
       <h2 className="text-3xl font-semibold tracking-tighter">Latest Posts</h2>
-      <div style={{ borderTop: "1px solid #fff "}} className="mb-8 mt-1"></div>
-      <BlogPosts />      
+      <div style={{ borderTop: "1px solid #fff " }} className="mb-8 mt-1"></div>
+      <BlogPosts />
     </section>
   );
 }
