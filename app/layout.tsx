@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Niranjan Fartare | Portfolio",
     description:
-      "Upcoming SDE. Highly motivated individual and a quick learner. Currently learning Java. Aspiring to be a Full Stack Developer.",
+      "Data Engineer with 3+ years experience in AWS, PySpark & Spark. Built scalable ETL pipelines for finance & telecom domains using EMR, Glue and Redshift. Expert in big data processing & cloud platforms like AWS.",
     url: baseUrl,
     siteName: "Niranjan Fartare | Portfolio",
     locale: "en_US",
