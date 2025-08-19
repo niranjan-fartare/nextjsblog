@@ -151,6 +151,9 @@ export default function Page() {
       >
         Mastodon
       </Link>
+      <Link href="https://defcon.social/@niranjan" className="hidden" rel="me">
+        Mastodon
+      </Link>
     </section>
   );
 }
