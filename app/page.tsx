@@ -1,4 +1,5 @@
 import { BlogPosts } from "app/components/posts";
+import Link from "next/link";
 
 export default function Page() {
   const experiences = [
@@ -133,6 +134,13 @@ export default function Page() {
       <h2 className="text-2xl font-semibold mt-12 mb-2">Latest Posts</h2>
       <div className="border-t border-gray-300 dark:border-gray-600 mb-6"></div>
       <BlogPosts />
+      <Link
+        href="https://mastodon.social/@niranjan0"
+        className="hidden"
+        rel="me"
+      >
+        Mastodon
+      </Link>
     </section>
   );
 }
