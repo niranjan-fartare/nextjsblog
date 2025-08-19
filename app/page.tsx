@@ -164,6 +164,9 @@ export default function Page() {
       >
         Mastodon
       </Link>
+      <Link href="https://mstdn.party/@niranjan" className="hidden" rel="me">
+        Mastodon
+      </Link>
     </section>
   );
 }
