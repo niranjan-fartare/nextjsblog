@@ -157,6 +157,13 @@ export default function Page() {
       <Link href="https://ioc.exchange/@niranjan" className="hidden" rel="me">
         Mastodon
       </Link>
+      <Link
+        href="https://cyberplace.social/@niranjan"
+        className="hidden"
+        rel="me"
+      >
+        Mastodon
+      </Link>
     </section>
   );
 }
