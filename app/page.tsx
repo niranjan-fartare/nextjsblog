@@ -141,6 +141,16 @@ export default function Page() {
       >
         Mastodon
       </Link>
+      <Link href="https://mas.to/@niranjan1" className="hidden" rel="me">
+        Mastodon
+      </Link>
+      <Link
+        href="https://social.vivaldi.net/@niranjan0"
+        className="hidden"
+        rel="me"
+      >
+        Mastodon
+      </Link>
     </section>
   );
 }
