@@ -6,7 +6,7 @@ export default function Page() {
     {
       company: "ERP Consulting",
       position: "Data Engineer",
-      duration: "July 2023 – Present",
+      duration: "July 2023 – August 2025",
       location: "Pune",
       responsibilities: [
         "Built scalable ETL pipelines using PySpark and Spark to process thousands of daily credit card transactions from AWS S3",
